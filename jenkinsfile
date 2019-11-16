@@ -28,8 +28,7 @@ pipeline {
         }
         stage('Email Notification') {
             steps {
-               mail bcc: '', body: 'Hi build success', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'elyes.othmani@esprit.tn'
-            }
+emailext body: 'sssssssssssss', subject: 'eail', to: 'elyes.othmani@esprit.tn'            }
         }
 	
     }
