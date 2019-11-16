@@ -16,6 +16,8 @@ pipeline {
         }
         stage('Test') {
             steps {
+	    bat label: '', script: '''mvn test
+'''
                 echo 'Testing..'
             }
         }
