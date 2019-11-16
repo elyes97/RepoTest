@@ -26,5 +26,11 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Email Notification') {
+            steps {
+               mail bcc: '', body: 'Hi build success', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'elyes.othmani@esprit.tn'
+            }
+        }
+	
     }
 }
