@@ -21,15 +21,20 @@ pipeline {
                 echo 'Testing..'
             }
         }
+	        stage('Email Notification') {
+            steps {
+		mail bcc: '', body: 'gvubjnlk', cc: '', from: '', replyTo: '', subject: 'vuyiuonl', to: 'elyes.othmani@esprit.tn'  
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
         }
-        stage('Email Notification') {
-            steps {
-		mail bcc: '', body: 'gvubjnlk', cc: '', from: '', replyTo: '', subject: 'vuyiuonl', to: 'elyes.othmani@esprit.tn'  
-		}
-	
-        }
+    }
 }
+
+
+
+        
+
